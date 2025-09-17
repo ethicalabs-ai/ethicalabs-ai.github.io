@@ -7,48 +7,294 @@
     <meta name="title" property="og:type" content="website">
     <meta name="image" property="og:image" content="https://www.ethicalabs.ai/assets/E-full-bg.png">
     <meta name="url" property="og:url" content="https://www.ethicalabs.ai/">
-    <meta name="description" property="og:description" content="Building practical, ethical and sustainable AI/ML solutions">
+    <meta name="description" property="og:description" content="ethicalabs.ai is a consultancy specializing in advanced, ethical, and privacy-preserving AI/ML solutions. We focus on federated learning, fine-tuning, and ResearchOps to help teams build responsible, scalable, and sustainable AI.">
     <title>ethicalabs.ai</title>
     <link rel="icon" href="https://www.ethicalabs.ai/assets/favicon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        .icon {
-            width: 20px;
-            height: 20px;
-            vertical-align: middle;
-            margin-right: 8px;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #38619a;
+            line-height: 1.6;
         }
-        
-        .logo {
-            max-width: 200px; /* Limits the maximum width */
-            height: auto;    /* Maintains aspect ratio */
-            margin-bottom: 20px;
+        .container {
+            max-width: 1200px;
+        }
+        nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+        section {
+            scroll-margin-top: 5rem;
         }
     </style>
 </head>
-<body class="bg-light text-center py-5">
-    <div class="container">
-        <img src="./assets/E-bk-full-nobg.png" alt="ethicalabs.ai Logo" class="logo img-fluid">
-
-        <!-- Description -->
-        <p class="lead text-muted">
-            Building practical, ethical and sustainable AI/ML solutions
-        </p>
-
-        <!-- Links -->
-        <div class="mt-4">
-            <a href="https://github.com/ethicalabs-ai" class="btn btn-dark mx-2">
-                <i class="fa fa-github"></i> GitHub
+<body class="antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-2xl text-gray-800 flex items-center space-x-2">
+                <img src="./assets/E-bk-full-nobg.png" alt="ethicalabs.ai logo" class="h-8">
             </a>
-            <a href="https://huggingface.co/ethicalabs" class="btn btn-dark mx-2">
-                <i class="fa fa-huggingface"></i> Hugging Face
+            <div class="space-x-4 hidden md:flex">
+                <a href="#services" class="text-gray-600 hover:text-gray-900 transition-colors">Services</a>
+                <a href="#projects" class="text-gray-600 hover:text-gray-900 transition-colors">Projects</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/90 backdrop-blur-sm shadow-inner py-2">
+            <a href="#services" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Services</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Projects</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition-colors">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gray-900 text-white min-h-screen flex items-center justify-center p-8">
+        <div class="text-center container mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 rounded-lg">Advanced AI/ML, Responsibly Built.</h1>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                We design and deploy ethical and privacy-first solutions for a sustainable future.
+            </p>
+            <a href="#services" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                Explore Our Services
             </a>
         </div>
-    </div>
+    </header>
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <main class="container mx-auto py-16 px-8">
+
+        <!-- Services Section -->
+        <section id="services" class="mb-16">
+            <h2 class="text-4xl font-bold text-center mb-12 rounded-lg py-2">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">AI/ML Infrastructure & Operations</h3>
+                    <p class="text-gray-600">
+                        We blend ResearchOps, taking your projects from the initial Jupyter Notebook phase all the way to production. <br /><br /> This is combined with our expertise in DevOps, which includes platform engineering and site reliability, to manage your product lifecycle from end-to-end.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Ethical AI Advisory</h3>
+                    <p class="text-gray-600">
+                        Build and deploy AI with integrity. <br /><br /> Our advisory services focus on explainable AI (XAI), bias mitigation, guardrails and responsible AI governance.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Feasibility Study & Project Prototyping</h3>
+                    <p class="text-gray-600">
+                        We rapidly transform feasible ideas into working proofs of concept. <br /><br /> Our methodology prioritizes human-in-the-loop oversight to ensure that AI agents never autonomously manage code or infrastructure, guaranteeing safety and accountability.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Synthetic Data Generation</h3>
+                    <p class="text-gray-600">
+                        Address data scarcity and privacy concerns with high-quality, diverse synthetic datasets.<br /><br /> Our tooling automates the creation of training data in an ethical and privacy-preserving manner.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Federated Learning</h3>
+                    <p class="text-gray-600">
+                        Securely train powerful models on decentralized data without compromising privacy.<br /><br /> We offer end-to-end solutions using the <a href="https://flower.ai">Flower framework.</a>
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 transition-transform transform hover:-translate-y-2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Advanced Fine-Tuning</h3>
+                    <p class="text-gray-600">
+                        Adapt cutting-edge models like ViTs and LLMs to your unique domain.<br /><br /> We specialize in low-resource, parameter-efficient fine-tuning for maximum impact.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-16">
+            <h2 class="text-4xl font-bold text-center mb-12 rounded-lg py-2">Selected Projects</h2>
+            <div class="space-y-12">
+                <!-- BlossomTune Submenu Section -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="md:flex md:items-center md:space-x-8 mb-8">
+                        <div class="md:w-1/2 mb-4 md:mb-0">
+                            <img src="https://placehold.co/600x400/e2e8f0/1a202c?text=BlossomTune+Orchestrator" alt="BlossomTune Orchestrator" class="rounded-lg shadow-md">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-2">BlossomTune Orchestrator</h4>
+                            <p class="text-gray-600 mb-4">
+                                Our flagship open-source Gradio app for managing and orchestrating federated learning participants. It simplifies the setup of a Flower Superlink server, enabling research teams and startups to easily coordinate federated experiments.
+                            </p>
+                            <a href="https://github.com/ethicalabs-ai" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                                Soon on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-8 mt-8 rounded-xl shadow-inner border border-gray-300">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 text-center">Services for BlossomTune Orchestrator</h4>
+                        <p class="text-gray-600 mb-4 text-center max-w-2xl mx-auto">
+                            While BlossomTune Orchestor is open-source, the infrastructure setup can be a challenge. We provide dedicated consultancy services to help you get started quickly and securely.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li><strong>Managed Hosting:</strong> Effortless deployment of your federated learning infrastructure on a scalable cloud environment.</li>
+                            <li><strong>Managed TLS Certificates:</strong>We handle the entire process of generating and renewing TLS/SSL certificates for your federated learning runs, ensuring secure communication without the complexity.</li>
+                            <li><strong>Expert Support:</strong>Our service is backed by a seasoned DevOps and AI/ML expert who understands the unique challenges of the Flower framework.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="md:flex md:items-center md:space-x-8 mb-8">
+                        <div class="md:w-1/2 mb-4 md:mb-0">
+                            <img src="https://placehold.co/600x400/e2e8f0/1a202c?text=BlossomTuneLLM" alt="BlossomTuneLLM Project" class="rounded-lg shadow-md">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-2">BlossomTuneLLM</h4>
+                            <p class="text-gray-600 mb-4">
+                                BlossomTuneLLM is an evolution of the FlowerTune LLM benchmarking initiative by <a href="https://www.flower.ai/">Flower Labs</a>. This project was my first ResearchOps interaction where, thanks to my platform engineering experience, I was able to automate the most tedious parts of running a federated fine-tuning simulation. We started by providing a cookiecutter template for federated learning, and this evolution now leverages Docker containers for both cloud-based deployments and on edge devices or laptops.
+                            </p>
+                            <a href="https://github.com/ethicalabs-ai/BlossomTuneLLM" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-8 mt-8 rounded-xl shadow-inner border border-gray-300">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 text-center">Services for BlossomTuneLLM</h4>
+                        <p class="text-gray-600 mb-4 text-center max-w-2xl mx-auto">
+                            BlossomTuneLLM and Flower Apps are open-source, but building and managing their infrastructure can be complex. We provide dedicated consultancy to streamline your federated learning projects, handling everything from scalable cloud deployment to secure TLS certificate management.                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li><strong>Federated Fine-Tuning of SLMs:</strong> We specialize in fine-tuning Small Language Models on specific tasks, where the goal is not benchmark supremacy but to excel on small tasks while keeping infrastructure costs low.</li>
+                            <li><strong>Managed Hosting:</strong> Effortless deployment of your federated learning infrastructure on a scalable cloud environment.</li>
+                            <li><strong>Managed TLS Certificates:</strong> We handle the entire process of generating and renewing TLS/SSL certificates for your federated learning runs, ensuring secure communication without the complexity.</li>
+                            <li><strong>Expert Support:</strong> Our service is backed by a seasoned DevOps and AI/ML expert who understands the unique challenges of the Flower framework.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BlossomTuneLLM-MLX Submenu Section -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="md:flex md:items-center md:space-x-8 mb-8">
+                        <div class="md:w-1/2 mb-4 md:mb-0">
+                            <img src="https://placehold.co/600x400/e2e8f0/1a202c?text=BlossomTuneLLM-MLX" alt="BlossomTuneLLM-MLX Project" class="rounded-lg shadow-md">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-2">BlossomTuneLLM-MLX</h4>
+                            <p class="text-gray-600 mb-4">
+                                A native implementation of our federated fine-tuning initiative for Apple Silicon. <br /><br /> By leveraging the MLX-LM framework, this project enables on-device federated learning on MacOS, reducing reliance on expensive cloud GPUs and championing privacy and sustainability.
+                            </p>
+                            <a href="https://github.com/ethicalabs-ai/BlossomTuneLLM-MLX" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-8 mt-8 rounded-xl shadow-inner border border-gray-300">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 text-center">Services for BlossomTuneLLM-MLX</h4>
+                        <p class="text-gray-600 mb-4 text-center max-w-2xl mx-auto">
+                            We extend our expertise to provide dedicated services for building custom on-device AI applications on MacOS.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li><strong>Custom Local-AI Application Development:</strong> We design and build personalized applications specifically for MacOS using the MLX framework.</li>
+                            <li><strong>Federated Learning as an Opt-in:</strong> We integrate federated learning as a secure, opt-in feature, ensuring user data never leaves the device while still contributing to model improvements.</li>
+                            <li><strong>Managed On-Device Workflows:</strong> We help you orchestrate and manage local AI/ML pipelines, from fine-tuning to deployment, optimized for Apple hardware.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Completionist Submenu Section -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                    <div class="md:flex md:items-center md:space-x-8 mb-8">
+                        <div class="md:w-1/2 mb-4 md:mb-0">
+                            <img src="https://placehold.co/600x400/e2e8f0/1a202c?text=Completionist" alt="Completionist Project" class="rounded-lg shadow-md">
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold text-gray-800 mb-2">Completionist</h4>
+                            <p class="text-gray-600 mb-4">
+                                A synthetic data generation tool that addresses data scarcity and privacy concerns. This open-source project automates the creation of diverse, high-quality datasets for fine-tuning models in an ethical and privacy-preserving manner, without relying on sensitive real-world data.
+                            </p>
+                            <a href="https://github.com/ethicalabs-ai/completionist" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                                View on GitHub →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-8 mt-8 rounded-xl shadow-inner border border-gray-300">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-4 text-center">Services for Completionist</h4>
+                        <p class="text-gray-600 mb-4 text-center max-w-2xl mx-auto">
+                            Completionist is a simple and powerful tool, but orchestrating and scaling the generation process can be complex. We provide expertise to help you build and manage your synthetic data pipeline.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600">
+                            <li><strong>Managed Inference Workflow:</strong> We handle the complexity of managing the inference endpoints and job orchestration needed to run large-scale data generation jobs.</li>
+                            <li><strong>Job Orchestration:</strong> We design and manage the entire workflow for your custom synthetic dataset creation, from prompt engineering to final dataset formatting.</li>
+                            <li><strong>Custom Dataset Creation:</strong> We work with your team to define and build tailored synthetic datasets for your specific fine-tuning or RAG needs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 md:flex md:items-center md:space-x-8">
+                    <div class="md:w-1/2 mb-4 md:mb-0">
+                        <img src="https://placehold.co/600x400/e2e8f0/1a202c?text=Kurtis+E1" alt="Kurtis E1 Project" class="rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Kurtis E1</h3>
+                        <p class="text-gray-600 mb-4">
+                            A privacy-first Small Language Model (SLM) assistant, developed with low-resource fine-tuning techniques. Kurtis E1 demonstrates the viability of building powerful, privacy-focused AI for on-device and limited-hardware deployments.
+                        </p>
+                        <a href="https://huggingface.co/ethicalabs/Kurtis-E1.1-Qwen3-4B" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                            View on Hugging Face →
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 md:flex md:items-center md:space-x-8">
+                    <div class="md:w-1/2 mb-4 md:mb-0">
+                        <img src="https://placehold.co/600x400/e2e8f0/1a202c?text=SkinCancerViT" alt="SkinCancerViT Project" class="rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">SkinCancerViT</h3>
+                        <p class="text-gray-600 mb-4">
+                            A multimodal deep learning model for skin cancer classification, fusing dermoscopic images with tabular clinical data. This project showcases our ability to deliver a robust, explainable, and multi-faceted AI product.
+                        </p>
+                        <a href="https://huggingface.co/ethicalabs/SkinCancerViT" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors">
+                            View on Hugging Face →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-16 bg-indigo-50 p-12 rounded-xl shadow-lg text-center">
+            <h2 class="text-4xl font-bold mb-4 rounded-lg py-2">Let's Build Something Together</h2>
+            <p class="text-gray-700 max-w-2xl mx-auto mb-8">
+                Whether you need a new software solution, want to discuss a federated learning initiative, or simply have questions about responsible and ethical AI/ML, we're here to help.
+            </p>
+            <a href="mailto:hello@ethicalabs.ai" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                Contact Us
+            </a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-400 py-8 px-8 text-center">
+        <p>&copy; 2025 ethicalabs.ai. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
