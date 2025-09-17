@@ -280,6 +280,46 @@
         <p>&copy; 2025 <a href="https://www.ethicalabs.ai/">ethicalabs.ai</a>. All rights reserved.</p>
     </footer>
 
+    <!-- Cookie Notice Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 text-center md:flex md:items-center md:justify-between shadow-lg z-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0 md:space-x-4">
+            <p class="text-sm md:text-base text-gray-300">
+                We use a cookie to remember your preference when you click 'Accept'. Our website doesn't track any personal data.
+            </p>
+            <div class="flex-shrink-0">
+                <button id="accept-cookies" class="px-5 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-colors duration-200">
+                    Accept
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptButton = document.getElementById('accept-cookies');
+
+        // Function to check for the cookie
+        function hasAcceptedCookies() {
+            return document.cookie.split(';').some((item) => item.trim().startsWith('cookie_consent=true'));
+        }
+
+        // Function to set the cookie
+        function setCookieConsent() {
+            const d = new Date();
+            d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000)); // 1 year expiry
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = "cookie_consent=true;" + expires + ";path=/;SameSite=Lax";
+            cookieBanner.style.display = 'none';
+        }
+
+        // Hide banner if cookie is already set
+        if (hasAcceptedCookies()) {
+            cookieBanner.style.display = 'none';
+        }
+
+        // Event listener for the accept button
+        acceptButton.addEventListener('click', setCookieConsent);
+    </script>
+
     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
